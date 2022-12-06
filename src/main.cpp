@@ -2,10 +2,9 @@
 
 void setup() {
   Serial.begin(115200);
-  pinMode(2,INPUT)  ;	//set pin 9 as INPUT 
-  pinMode(3,INPUT)  ;	//set pin 9 as INPUT 
-  // pinMode(5,INPUT)  ;	//set pin 9 as INPUT 
-  // pinMode(6,INPUT)  ;	//set pin 9 as INPUT 
+  for(int i = 1; i <= 4 ;i++){
+    pinMode(i,INPUT)  ;	
+  }
 }
 
 void loop() {
