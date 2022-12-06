@@ -2,19 +2,23 @@
 
 void setup() {
   Serial.begin(115200);
-  for(int i = 1; i <= 4 ;i++){
+  for(int i = 2; i <= 5 ;i++){
     pinMode(i,INPUT)  ;	
   }
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
-   int reads = digitalRead(3);	//read the digital value on pin 9
-  // Serial.print("1");
+  int temp = 1;
+  for(int i = 2; i <= 5 ;i++){
+    Serial.print(digitalRead(i));
+    temp *= digitalRead(i);
+  }
 
-  Serial.println(reads);
-
+  if(temp==1){
+    analogWrite(6, 220);  //A2
+  }
+  Serial.print("\n");
   delay(100);
 
 }

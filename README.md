@@ -1,3 +1,5 @@
+# GET START
+
 pio project init --board seeed_zero
 
 pio run
